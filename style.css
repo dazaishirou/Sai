@@ -1,0 +1,82 @@
+body { background-color:var(--back1);padding:0px;margin:0px;
+  
+  --back1: #eee;
+  --border: #d3d3d3;
+  --dark1: #212124;
+  --dark2: #2a2a2e;
+  --accent: #2b1ac4;
+  
+  --render1:url("https://i.imgur.com/xQNZS7B.gif"), url(https://i.imgur.com/YKy9Xy6.gif);
+  
+  --serif: Cormorant Garamond, serif;
+  --sans: Inter, sans-serif;
+}
+a { text-decoration:none; }
+
+.path { display:grid;grid-template-columns:85px auto;height:100vh; }
+.path-left { background-color:var(--dark1);border-right:solid 5px var(--accent); }
+
+.path-dice { display:block;background-color:var(--dark2);width:50px;height:50px;margin:15px;border-radius:100%;display:flex;align-items:center;justify-content:center;font-size:25px;color:var(--accent); }
+
+.path-right { height:100vh;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--dark1) transparent);position:relative; }
+.path-head { height:720px;background:linear-gradient(var(--dark1) 5%,var(--accent));background-size:100% 300%;position:relative;overflow:hidden; }
+.path-head::before { content:'';display:block;position:absolute;top:0px;left:-500px;right:-500px;bottom:120px;border-radius:0% 0% 100% 100%;box-shadow:0px 200px var(--back1); }
+.path-head-back { height:100%;width:100%;background-image:var(--render1);background-position:center;background-size:250%;filter:grayscale(100%) blur(5px);mix-blend-mode:lighten;opacity:.1; }
+.path-head-name { position:absolute;font:700 italic 350px / 210px var(--serif);color:#000;text-transform:uppercase;white-space:nowrap;filter:drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent)) drop-shadow(0px 0px .3px var(--accent));mix-blend-mode:lighten;bottom:-15px;left:50px;letter-spacing:-20px;opacity:0; }
+.path-render { position:absolute;top:-75px;left:-150px;width:1020px;height:800px;background-image:var(--render1); }
+
+.path-basics { position:absolute;top:87px;/*left:460px;*/right:100px;color:var(--back1);filter:drop-shadow(0px 0px 15px var(--dark1)); }
+.path-basics h1 { margin:0px;font:900 125px / 100px var(--sans);text-transform:uppercase;text-align:right;position:relative; }
+.path-basics h1 b { display:block;font:900 20px / 10px var(--sans);letter-spacing:2px;position:absolute;background-color:var(--accent);height:91px;top:5px;left:65px;width:215px;padding-right:35px;display:flex;align-items:center;justify-content:flex-end; }
+.path-basics h1 b::before { content:'';display:block;position:absolute;left:-17px;width:34px;height:91px;background-color:var(--back1);transform:skew(-17deg); }
+.path-basics h2 { position:absolute;right:0px;margin:20px 5px 0px 0px;display:grid;grid-template-columns:auto auto;gap:20px;align-items:center;text-align:right;max-width:fit-content;font:900 15px / 12px var(--sans);text-transform:uppercase;letter-spacing:2px; }
+.path-basics h2:nth-child(3) { margin-top:65px; }
+.path-basics h2 b { display:block;font:600 15px / 12px var(--sans);padding:12px 12px 12px 20px;background-color:var(--back1);color:var(--dark1);position:relative; }
+.path-basics h2 b::before { position:absolute;content:'';display:block;height:4px;width:20px;left:-10px;top:17px;background-color:var(--back1);mix-blend-mode:difference; }
+
+.path-stats { display:grid;grid-template-columns:repeat(6,1fr);gap:15px;margin:6px 350px 0px 0px;display:none; }
+.path-stats div { background-color:var(--back1);border-radius:0px 0px 100% 100%;color:var(--dark1);display:flex;align-items:center;justify-content:center;position:relative;padding:15px;height:45px;font:900 25px / 10px var(--serif); }
+.path-stats div span { display:block;position:absolute;background-color:var(--accent);font:900 10px / 10px var(--sans);padding:5px;text-transform:uppercase;color:var(--back1);letter-spacing:1px;top:0px;border-radius:0px 0px 3px 3px; }
+.path-stats div b { display:block;position:absolute;bottom:-15px;background-color:var(--dark1);border-radius:100%;font:900 10px / 10px var(--sans);height:30px;width:30px;display:flex;align-items:center;justify-content:center;text-transform:uppercase;color:var(--back1);  }
+
+
+
+/*----- 【 MUSIC PLAYER #08 by @glenthemes 】 -----*/
+[glenplayer08]{
+	
+	/*-- player position --*/
+	--MusicPlayer-Position: "bottom left";
+	--MusicPlayer-Corner-Offset: 50px;
+	
+	/*-- album image --*/
+	--MusicPlayer-Album-Image-Size: 54px;
+	--MusicPlayer-Album-Image-Corner-Roundness: 3px;
+	
+	/*-- player buttons (play/pause) --*/
+	--MusicPlayer-Buttons-Size: 31px;
+	--MusicPlayer-Buttons-Color: #ddd;
+	--MusicPlayer-Buttons-Padding: 8px;
+	--MusicPlayer-Buttons-Border-Size: 1px;
+	--MusicPlayer-Buttons-Border-Color: #bbb;
+	--MusicPlayer-Buttons-Background: #000000;
+	--MusicPlayer-Buttons-Background-Transparency: 45%;
+	--MusicPlayer-Buttons-Background-Blur: 3px;
+	
+	/*-- player song name --*/
+	--MusicPlayer-Song-Name-Size: 12px;
+	--MusicPlayer-Song-Name-Color: #222;
+	
+	/*-- player artist name --*/
+	--MusicPlayer-Artist-Name-Size: 12px;
+	--MusicPlayer-Artist-Name-Color: #777;
+	
+	/*-- player gap/spacing --*/
+	--MusicPlayer-Center-Gap: 14px;
+	--MusicPlayer-Text-Line-Spacing: 4px;
+	
+	/*-- playback settings --*/
+	--MusicPlayer-Autoplay: "no";
+	--MusicPlayer-Replay: "no";
+	
+}/* don't delete this line */
+/*---- END MUSIC PLAYER ----*/
